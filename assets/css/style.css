@@ -1,416 +1,379 @@
-/* ===== RESET E CONFIGURAÇÕES BÁSICAS ===== */
-/* Reset básico - Remove margens, paddings padrão e define box-sizing uniforme */
+/* ===== ZERANDO TUDO PRIMEIRO ===== */
+/* Isso aqui remove as configurações chatas que o navegador já vem com */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura */
+  margin: 0;           /* Tira todas as margens */
+  padding: 0;          /* Tira todos os espaçamentos internos */
+  box-sizing: border-box; /* Faz as contas de tamanho ficarem mais fáceis */
 }
 
-/* ===== ESTILO DO CORPO DO DOCUMENTO ===== */
-/* Configurações gerais da página */
+/* ===== CONFIGURANDO A PÁGINA TODA ===== */
+/* Aqui a gente deixa a página bonita de forma geral */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Stack de fontes modernas */
-  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
-  color: #333; /* Cor do texto principal */
-  background-color: #f4f4f4; /* Fundo cinza claro */
-  padding: 20px; /* Espaçamento interno da página */
-  max-width: 1200px; /* Largura máxima para evitar linhas muito longas */
-  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna que fica legal */
+  line-height: 1.6;        /* Espaço entre as linhas pra não ficar grudado */
+  color: #333;              /* Cor do texto (cinza escuro) */
+  background-color: #f4f4f4; /* Fundo da página (cinza clarinho) */
+  padding: 20px;            /* Respiro nas bordas */
+  max-width: 1200px;        /* Não deixa ficar muito largo */
+  margin: 0 auto;           /* Centraliza tudo */
 }
 
-/* ===== CABEÇALHO PRINCIPAL ===== */
-/* Estilo do header da página */
+/* ===== O CABEÇALHO PRINCIPAL ===== */
+/* Aquela parte de cima da página, tipo um banner */
 .header {
-  background-color: #2c3e50; /* Azul escuro elegante */
-  color: white;
-  padding: 2rem; /* Espaçamento interno generoso */
-  text-align: center;
-  border-radius: 10px; /* Cantos arredondados */
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+  background-color: #2c3e50; /* Azul escuro que fica elegante */
+  color: white;               /* Texto branco */
+  padding: 2rem;              /* Bastante espaço interno */
+  text-align: center;         /* Texto no centro */
+  border-radius: 10px;        /* Cantos arredondados (fica mais suave) */
+  margin-bottom: 2rem;        /* Espaço embaixo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombrinha sutil */
 }
 
-/* Título principal do header */
+/* O título gigante do cabeçalho */
 .header h1 {
-  font-size: 2.5rem; /* Tamanho grande e impactante */
-  font-weight: 900; /* Peso extra-bold */
-  color: #f3f3f3; /* Branco levemente acinzentado */
+  font-size: 2.5rem;    /* BEM grande */
+  font-weight: 900;     /* Super negrito */
+  color: #f3f3f3;       /* Branco meio acinzentado */
 }
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
-/* Container principal do conteúdo */
+/* ===== ONDE FICA O CONTEÚDO PRINCIPAL ===== */
+/* A caixa branca onde fica todo o texto importante */
 .main {
-  background-color: white; /* Fundo branco para contraste */
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Consistente com o header */
-  margin-bottom: 2rem;
+  background-color: white;    /* Fundo branquinho */
+  padding: 2rem;              /* Espaço interno generoso */
+  border-radius: 10px;        /* Cantos arredondados de novo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mesma sombra do header */
+  margin-bottom: 2rem;        /* Espaço embaixo */
 }
 
-/* ===== SEÇÕES DO DOCUMENTO ===== */
-/* Estilo para divisões de seção */
+/* ===== DIVIDINDO O CONTEÚDO EM SEÇÕES ===== */
+/* Cada "capítulo" ou parte do seu conteúdo */
 .section {
-  margin-bottom: 3rem; /* Espaçamento generoso entre seções */
-  padding-bottom: 2rem;
-  border-bottom: 2px solid #ecf0f1; /* Linha divisória sutil */
+  margin-bottom: 3rem;                 /* Bastante espaço entre as seções */
+  padding-bottom: 2rem;                /* Espaço interno embaixo */
+  border-bottom: 2px solid #ecf0f1;    /* Linha fininha pra separar */
 }
 
-/* Remove a borda da última seção */
+/* A última seção não precisa de linha embaixo */
 .section:last-child {
-  border-bottom: none;
+  border-bottom: none; /* Remove a linha */
 }
 
 /* Títulos das seções */
 .section h2 {
-  color: #2c3e50; /* Mesma cor do header para consistência */
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 3px solid #3498db; /* Linha azul para destaque */
-  display: inline-block; /* Faz a linha acompanhar apenas o texto */
+  color: #2c3e50;                    /* Mesma cor do header */
+  font-size: 1.8rem;                 /* Bem grande */
+  margin-bottom: 1.5rem;             /* Espaço embaixo */
+  padding-bottom: 0.5rem;            /* Espacinho antes da linha */
+  border-bottom: 3px solid #3498db;  /* Linha azul bonitinha embaixo */
+  display: inline-block;             /* Faz a linha só do tamanho do texto */
 }
 
-/* ===== HIERARQUIA DE CABEÇALHOS ===== */
-/* Diferentes níveis de títulos com tamanhos decrescentes */
+/* ===== OS DIFERENTES TIPOS DE TÍTULO ===== */
+/* Do maior (h1) pro menor (h6) - tipo uma hierarquia */
 h1 {
-  color: #2c3e50;
-  font-size: 2.5rem;
-  margin: 1rem 0;
+  color: #2c3e50;   /* Azul escuro */
+  font-size: 2.5rem; /* Gigante */
+  margin: 1rem 0;    /* Espaço em cima e embaixo */
 }
 h2 {
-  color: #34495e; /* Tom ligeiramente mais claro */
-  font-size: 2rem;
+  color: #34495e;   /* Azul um pouco mais claro */
+  font-size: 2rem;   /* Grande */
   margin: 1rem 0;
 }
 h3 {
   color: #34495e;
-  font-size: 1.7rem;
+  font-size: 1.7rem; /* Médio-grande */
   margin: 1rem 0;
 }
 h4 {
   color: #34495e;
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* Médio */
   margin: 1rem 0;
 }
 h5 {
   color: #34495e;
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Pequeno-médio */
   margin: 1rem 0;
 }
 h6 {
   color: #34495e;
-  font-size: 1rem;
+  font-size: 1rem;   /* Normal */
   margin: 1rem 0;
 }
 
 /* ===== PARÁGRAFOS ===== */
-/* Estilo dos parágrafos com texto justificado */
+/* O texto normal que a gente escreve */
 p {
-  margin-bottom: 1rem;
-  text-align: justify; /* Alinhamento justificado para melhor apresentação */
+  margin-bottom: 1rem;    /* Espaço entre parágrafos */
+  text-align: justify;    /* Alinha nas duas bordas (fica mais "livro") */
 }
 
-/* ===== FORMATAÇÃO DE TEXTO INLINE ===== */
-/* Negrito - cor vermelha para destaque */
+/* ===== DEIXANDO O TEXTO MAIS INTERESSANTE ===== */
+/* Negrito - quando você quer ENFATIZAR algo */
 strong,
 b {
-  color: #e74c3c; /* Vermelho */
-  font-weight: bold;
+  color: #e74c3c;      /* Vermelho para chamar atenção */
+  font-weight: bold;   /* Negrito mesmo */
 }
 
-/* Itálico - cor roxa para diferenciação */
+/* Itálico - pra dar uma ênfase mais sutil */
 em,
 i {
-  color: #9b59b6; /* Roxo */
-  font-style: italic;
+  color: #9b59b6;      /* Roxo */
+  font-style: italic;  /* Inclinado */
 }
 
-/* Sublinhado - cor azul */
+/* Sublinhado - igual quando você marca com caneta */
 u {
-  text-decoration: underline;
-  color: #3498db; /* Azul */
+  text-decoration: underline; /* Linha embaixo */
+  color: #3498db;             /* Azul */
 }
 
-/* Texto riscado - cor cinza para indicar "removido" */
+/* Texto riscado - quando algo não vale mais */
 s {
-  text-decoration: line-through;
-  color: #95a5a6; /* Cinza */
+  text-decoration: line-through; /* Linha no meio */
+  color: #95a5a6;                /* Cinza (meio "morto") */
 }
 
-/* Texto marcado/destacado - fundo laranja */
+/* Texto marcado - igual marca-texto amarelo */
 mark {
-  background-color: #f39c12; /* Laranja */
-  color: white;
-  padding: 2px 4px; /* Pequeno padding para não grudar no texto */
-  border-radius: 3px;
+  background-color: #f39c12; /* Fundo laranja */
+  color: white;               /* Texto branco */
+  padding: 2px 4px;          /* Espacinho para não grudar */
+  border-radius: 3px;        /* Cantinhos arredondados */
 }
 
-/* Texto pequeno - menor e acinzentado */
+/* Texto pequenininho */
 small {
-  font-size: 0.8rem;
-  color: #7f8c8d; /* Cinza médio */
+  font-size: 0.8rem; /* Menor que o normal */
+  color: #7f8c8d;    /* Cinza médio */
 }
 
-/* Sobrescrito e subscrito - cor laranja */
+/* Sobrescrito (tipo x²) e subscrito (tipo H₂O) */
 sub,
 sup {
-  font-size: 0.75rem;
-  color: #e67e22; /* Laranja escuro */
+  font-size: 0.75rem; /* Bem pequeno */
+  color: #e67e22;     /* Laranja */
 }
 
 /* ===== CITAÇÕES ===== */
-/* Bloco de citação com borda lateral azul */
+/* Quando você quer citar o que alguém disse */
 blockquote {
-  background-color: #ecf0f1; /* Fundo cinza muito claro */
-  border-left: 5px solid #3498db; /* Borda azul característica */
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic; /* Itálico tradicional para citações */
-  color: #2c3e50;
-  border-radius: 0 5px 5px 0; /* Cantos arredondados apenas à direita */
+  background-color: #ecf0f1;        /* Fundo cinza bem clarinho */
+  border-left: 5px solid #3498db;   /* Barra azul na lateral esquerda */
+  padding: 1.5rem;                  /* Espaço interno */
+  margin: 1.5rem 0;                 /* Espaço em volta */
+  font-style: italic;               /* Inclinado (é tradição) */
+  color: #2c3e50;                   /* Azul escuro */
+  border-radius: 0 5px 5px 0;       /* Arredondado só na direita */
 }
 
-/* Citação inline */
+/* Citação pequena dentro do texto */
 q {
-  font-style: italic;
-  color: #8e44ad; /* Roxo escuro */
+  font-style: italic;  /* Inclinado */
+  color: #8e44ad;      /* Roxo escuro */
 }
 
-/* Referência de citação */
+/* Para referenciar de onde veio a citação */
 cite {
-  font-style: italic;
-  color: #27ae60; /* Verde */
-  font-weight: bold;
+  font-style: italic;  /* Inclinado */
+  color: #27ae60;      /* Verde */
+  font-weight: bold;   /* Negrito */
 }
 
-/* ===== ELEMENTOS DE CÓDIGO ===== */
-/* Código inline - fundo escuro */
+/* ===== CÓDIGO DE PROGRAMAÇÃO ===== */
+/* Para quando você quer mostrar código pequeno no meio do texto */
 code {
-  background-color: #2c3e50; /* Azul escuro */
-  color: #ecf0f1; /* Texto claro */
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: "Courier New", monospace; /* Fonte monoespaçada */
-  font-size: 0.9rem;
+  background-color: #2c3e50;              /* Fundo escuro */
+  color: #ecf0f1;                         /* Texto clarinho */
+  padding: 2px 6px;                       /* Espacinho */
+  border-radius: 4px;                     /* Cantos arredondados */
+  font-family: "Courier New", monospace; /* Fonte de código */
+  font-size: 0.9rem;                     /* Um pouquinho menor */
 }
 
-/* Bloco de código pré-formatado */
+/* Para blocos grandes de código */
 pre {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 1.5rem;
-  border-radius: 8px;
-  overflow-x: auto; /* Scroll horizontal se necessário */
-  margin: 1rem 0;
-  font-family: "Courier New", monospace;
-  line-height: 1.4; /* Melhor legibilidade para código */
+  background-color: #2c3e50;              /* Mesmo fundo escuro */
+  color: #ecf0f1;                         /* Texto claro */
+  padding: 1.5rem;                        /* Mais espaço interno */
+  border-radius: 8px;                     /* Cantos mais arredondados */
+  overflow-x: auto;                       /* Se for muito largo, rola pro lado */
+  margin: 1rem 0;                         /* Espaço em volta */
+  font-family: "Courier New", monospace; /* Fonte de código */
+  line-height: 1.4;                      /* Espaçamento entre linhas */
 }
 
-/* Teclas do teclado - estilo de botão */
+/* Para mostrar teclas do teclado (tipo "Aperte Ctrl+C") */
 kbd {
-  background-color: #34495e; /* Cinza escuro */
-  color: white;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-family: "Courier New", monospace;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Efeito de botão pressionável */
+  background-color: #34495e;              /* Cinza escuro */
+  color: white;                           /* Texto branco */
+  padding: 3px 8px;                       /* Espaço interno */
+  border-radius: 4px;                     /* Cantos arredondados */
+  font-family: "Courier New", monospace; /* Fonte de código */
+  font-size: 0.9rem;                     /* Pequeno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para parecer botão */
 }
 
-/* Exemplo de saída */
+/* Para mostrar resultado/saída de código */
 samp {
-  background-color: #27ae60; /* Verde */
-  color: white;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: "Courier New", monospace;
+  background-color: #27ae60;              /* Verde */
+  color: white;                           /* Texto branco */
+  padding: 2px 6px;                       /* Espacinho */
+  border-radius: 4px;                     /* Cantos arredondados */
+  font-family: "Courier New", monospace; /* Fonte de código */
 }
 
-/* Variáveis */
+/* Para variáveis em fórmulas matemáticas */
 var {
-  background-color: #8e44ad; /* Roxo */
-  color: white;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-style: italic; /* Tradicional para variáveis matemáticas */
+  background-color: #8e44ad;              /* Roxo */
+  color: white;                           /* Texto branco */
+  padding: 2px 6px;                       /* Espacinho */
+  border-radius: 4px;                     /* Cantos arredondados */
+  font-style: italic;                     /* Inclinado (tradição matemática) */
 }
 
 /* ===== ABREVIAÇÕES ===== */
-/* Abreviações com linha pontilhada para indicar explicação */
+/* Palavras abreviadas que você pode passar o mouse para ver o significado */
 abbr,
 acronym {
-  border-bottom: 2px dotted #3498db; /* Linha pontilhada azul */
-  cursor: help; /* Cursor muda para indicar ajuda disponível */
-  color: #2980b9; /* Azul escuro */
+  border-bottom: 2px dotted #3498db; /* Linha pontilhada embaixo */
+  cursor: help;                      /* Mouse vira uma interrogação */
+  color: #2980b9;                    /* Azul escuro */
 }
 
 /* ===== ENDEREÇO ===== */
-/* Estilo para informações de endereço */
+/* Para informações de contato/endereço */
 address {
-  background-color: #ecf0f1;
-  padding: 1rem;
-  border-radius: 5px;
-  font-style: italic; /* Estilo tradicional para endereços */
-  color: #2c3e50;
-  border-left: 4px solid #95a5a6; /* Borda cinza para identificação */
+  background-color: #ecf0f1;        /* Fundo cinza clarinho */
+  padding: 1rem;                    /* Espaço interno */
+  border-radius: 5px;               /* Cantos arredondados */
+  font-style: italic;               /* Inclinado */
+  color: #2c3e50;                   /* Azul escuro */
+  border-left: 4px solid #95a5a6;   /* Barra cinza na lateral */
 }
 
-/* ===== TEMPO/DATA ===== */
-/* Estilo para elementos de tempo */
+/* ===== DATA E HORA ===== */
+/* Para marcar datas importantes */
 time {
-  background-color: #e8f5e8; /* Fundo verde muito claro */
-  color: #27ae60; /* Verde */
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: bold;
+  background-color: #e8f5e8; /* Fundo verde bem clarinho */
+  color: #27ae60;            /* Verde */
+  padding: 2px 6px;          /* Espacinho */
+  border-radius: 4px;        /* Cantos arredondados */
+  font-weight: bold;         /* Negrito */
 }
 
 /* ===== TEXTO EDITADO ===== */
-/* Texto deletado - fundo vermelho claro */
+/* Para mostrar que algo foi removido */
 del {
-  background-color: #ffebee; /* Rosa muito claro */
-  color: #c62828; /* Vermelho escuro */
-  text-decoration: line-through;
-  padding: 2px 4px;
-  border-radius: 3px;
+  background-color: #ffebee;       /* Fundo rosa clarinho */
+  color: #c62828;                  /* Vermelho escuro */
+  text-decoration: line-through;   /* Riscado */
+  padding: 2px 4px;               /* Espacinho */
+  border-radius: 3px;             /* Cantos arredondados */
 }
 
-/* Texto inserido - fundo verde claro */
+/* Para mostrar que algo foi adicionado */
 ins {
-  background-color: #e8f5e8; /* Verde muito claro */
-  color: #2e7d32; /* Verde escuro */
-  text-decoration: underline;
-  padding: 2px 4px;
-  border-radius: 3px;
+  background-color: #e8f5e8;     /* Fundo verde clarinho */
+  color: #2e7d32;                /* Verde escuro */
+  text-decoration: underline;     /* Sublinhado */
+  padding: 2px 4px;              /* Espacinho */
+  border-radius: 3px;            /* Cantos arredondados */
 }
 
-/* ===== CLASSE PERSONALIZADA ===== */
-/* Classe para destacar texto importante */
+/* ===== CLASSE ESPECIAL ===== */
+/* Uma classe que você pode usar para destacar coisas importantes */
 .highlight {
-  background-color: #fff59d; /* Amarelo claro */
-  color: #f57f17; /* Amarelo escuro */
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: bold;
+  background-color: #fff59d; /* Amarelo clarinho */
+  color: #f57f17;            /* Amarelo escuro */
+  padding: 2px 6px;          /* Espacinho */
+  border-radius: 4px;        /* Cantos arredondados */
+  font-weight: bold;         /* Negrito */
 }
 
 /* ===== LISTAS DE DEFINIÇÃO ===== */
-/* Container da lista de definições */
+/* Como um mini-dicionário dentro do seu texto */
 dl {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0; /* Espaço em volta */
 }
 
-/* Termo a ser definido */
+/* A palavra que você vai definir */
 dt {
-  font-weight: bold;
-  color: #2c3e50;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  font-weight: bold;      /* Negrito */
+  color: #2c3e50;         /* Azul escuro */
+  margin-top: 1rem;       /* Espaço em cima */
+  margin-bottom: 0.5rem;  /* Espaço embaixo */
+  font-size: 1.1rem;      /* Um pouquinho maior */
 }
 
-/* Definição do termo */
+/* A explicação da palavra */
 dd {
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-  color: #34495e;
-  padding-left: 1rem;
-  border-left: 3px solid #bdc3c7; /* Borda para hierarquia visual */
+  margin-left: 2rem;              /* Empurra pra direita */
+  margin-bottom: 1rem;            /* Espaço embaixo */
+  color: #34495e;                 /* Azul acinzentado */
+  padding-left: 1rem;             /* Espaço interno na esquerda */
+  border-left: 3px solid #bdc3c7; /* Linha cinza na lateral */
 }
 
-/* ===== TEXTO BIDIRECIONAL ===== */
-/* Elementos para controle de direção de texto */
+/* ===== TEXTO EM LÍNGUAS DIFERENTES ===== */
+/* Para textos que têm direção diferente (árabe, hebraico, etc.) */
 bdo {
-  background-color: #ffeaa7; /* Amarelo claro */
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: #2d3436;
+  background-color: #ffeaa7; /* Amarelo clarinho */
+  padding: 2px 6px;          /* Espacinho */
+  border-radius: 4px;        /* Cantos arredondados */
+  color: #2d3436;            /* Cinza escuro */
 }
 
 bdi {
-  background-color: #fab1a0; /* Laranja claro */
-  padding: 2px 6px;
-  border-radius: 4px;
-  color: #2d3436;
+  background-color: #fab1a0; /* Laranja clarinho */
+  padding: 2px 6px;          /* Espacinho */
+  border-radius: 4px;        /* Cantos arredondados */
+  color: #2d3436;            /* Cinza escuro */
 }
 
-/* ===== DETALHES EXPANSÍVEIS ===== */
-/* Container de detalhes expansíveis */
+/* ===== CONTEÚDO EXPANSÍVEL ===== */
+/* Aqueles negócios que você clica e abre mais informação */
 details {
-  background-color: #f8f9fa; /* Fundo cinza muito claro */
-  border: 1px solid #dee2e6; /* Borda sutil */
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem 0;
+  background-color: #f8f9fa;  /* Fundo cinza bem clarinho */
+  border: 1px solid #dee2e6;  /* Borda fininha */
+  border-radius: 8px;         /* Cantos arredondados */
+  padding: 1rem;              /* Espaço interno */
+  margin: 1rem 0;             /* Espaço em volta */
 }
 
-/* Título clicável dos detalhes */
+/* A parte que você clica para abrir */
 summary {
-  font-weight: bold;
-  color: #495057;
-  cursor: pointer; /* Indica que é clicável */
-  padding: 0.5rem;
-  background-color: #e9ecef; /* Fundo cinza claro */
-  border-radius: 5px;
-  margin: -1rem -1rem 1rem -1rem; /* Margem negativa para ocupar toda largura */
-  transition: background-color 0.3s ease; /* Transição suave no hover */
+  font-weight: bold;                          /* Negrito */
+  color: #495057;                             /* Cinza */
+  cursor: pointer;                            /* Mouse vira mãozinha */
+  padding: 0.5rem;                            /* Espaço interno */
+  background-color: #e9ecef;                  /* Fundo cinza clarinho */
+  border-radius: 5px;                         /* Cantos arredondados */
+  margin: -1rem -1rem 1rem -1rem;             /* Margem negativa (truque avançado) */
+  transition: background-color 0.3s ease;     /* Muda de cor suavemente */
 }
 
-/* Efeito hover no summary */
+/* Quando você passa o mouse por cima */
 summary:hover {
-  background-color: #dee2e6; /* Escurece ligeiramente */
+  background-color: #dee2e6; /* Fica um pouquinho mais escuro */
 }
 
-/* Summary quando os detalhes estão abertos */
+/* Quando está aberto */
 details[open] summary {
-  background-color: #3498db; /* Azul quando expandido */
-  color: white;
+  background-color: #3498db; /* Fica azul */
+  color: white;              /* Texto branco */
 }
 
 /* ===== RODAPÉ ===== */
-/* Estilo do footer */
+/* A parte de baixo da página */
 .footer {
-  background-color: #34495e; /* Cinza escuro */
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Consistente com outros elementos */
-}
-
-/* ===== RESPONSIVIDADE ===== */
-/* Adaptações para telas menores (tablets e celulares) */
-@media (max-width: 768px) {
-  body {
-    padding: 10px; /* Reduz padding em telas pequenas */
-  }
-
-  .header h1 {
-    font-size: 2rem; /* Reduz tamanho do título */
-  }
-
-  .main {
-    padding: 1rem; /* Reduz padding do conteúdo principal */
-  }
-
-  .section h2 {
-    font-size: 1.5rem; /* Reduz tamanho dos títulos de seção */
-  }
-}
-
-/* ===== ANIMAÇÕES E EFEITOS ===== */
-/* Transições suaves para todos os elementos */
-* {
-  transition: all 0.3s ease; /* Transição global para efeitos suaves */
-}
-
-/* ===== EFEITOS HOVER ===== */
-/* Efeito sutil de movimento nos parágrafos */
-p:hover {
-  transform: translateX(5px); /* Move 5px para a direita */
-}
-
-/* Efeito de sombra nas seções */
-.section:hover {
-  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.1); /* Sombra azul sutil */
+  background-color: #34495e;                /* Cinza escuro */
+  color: white;                             /* Texto branco */
+  text-align: center;                       /* Centralizado */
+  padding: 2rem;                            /* Espaço interno */
+  border-radius: 10px;                      /* Cantos arredondados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra igual os outros */
 }
